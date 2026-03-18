@@ -1,39 +1,40 @@
 # Smart Footgolf Inventory Management System (SFIMS)
 
-A robust backend inventory and facility management solution built with C++ and SQL. This system streamlines facility operations by providing real-time tracking of sports equipment, secure role-based access for staff, and automated transaction and maintenance scheduling.
+This is my degree project built for managing a Footgolf facility. It is a C++ and SQL program designed to help sports facilities easily keep track of their equipment, manage staff duties, and record daily sales. 
 
 **Development Period:** 01-10-2025 to 31-01-2026
 
-## 🚀 Key Features
+## 🚀 What This System Does
 
-* **Advanced Inventory Control:** Real-time stock tracking with low-stock alerts and categorization (Rent/Sale).
-* **Secure Role-Based Authentication:** Distinct access levels for Managers, Inventory Staff, Counter Staff, and Maintenance Staff, including forced password changes on first login.
-* **Transaction Management:** ACID-compliant database operations for recording sales and equipment rentals, with automated stock deduction and tax calculation.
-* **Maintenance Timetables:** Automated scheduling and tracking for facility repairs, complete with staff assignment capabilities.
-* **Analytics & Reporting:** Generates dynamic, data-driven reports including Monthly Revenue, High Demand Items, and Daily Average Sales Analysis.
+* **Inventory Management:** Tracks how much equipment is in stock and gives warnings when items (like balls or shoes) are running low.
+* **Staff Login System:** Different staff members (Managers, Counter Staff, Maintenance) have their own accounts and specific access levels. 
+* **Sales & Rentals:** Records when items are sold or rented out. It automatically calculates the totals, adds tax, and updates the stock.
+* **Maintenance Schedule:** Allows managers to assign repair and cleaning tasks to the maintenance team.
+* **Reports:** Automatically creates easy-to-read reports showing monthly revenue and which items are used the most.
 
-## 🛠️ Technology Stack
+## 🛠️ Tools Used
 
-* **Core Logic:** C++
-* **Database Management:** MySQL
-* **Integration:** MySQL Connector/C++ (JDBC)
+* **Main Programming Language:** C++
+* **Database:** MySQL
+* **Connection:** MySQL Connector/C++ 
 
-## 🗄️ Database Architecture
+## 🗄️ Database Setup
 
-The system utilizes a fully relational SQL database (`smartfootgolfims`). Key tables include:
-* `users` - Manages staff credentials and roles.
-* `inventory` - Tracks item quantities, pricing, and rentable status.
-* `sales` & `sales_items` - Handles transactional data and invoice generation.
-* `maintenance_tasks` - Logs facility repair schedules and assigned staff.
+The project uses a MySQL database named `smartfootgolfims` with a few main tables:
+* `users` - Saves staff IDs, roles, and passwords.
+* `inventory` - Keeps track of all items and prices.
+* `sales` & `sales_items` - Stores all the receipt and transaction data.
+* `maintenance_tasks` - Holds the schedule for facility repairs.
 
-## ⚙️ How to Run
+## ⚙️ How to Test the Project
 
-1. **Database Setup:** * Install MySQL Server.
-   * Import the provided `database_schema.sql` file to create the `smartfootgolfims` schema and required tables.
-2. **C++ Environment:**
-   * Ensure you have a C++ compiler (like GCC or MSVC) installed.
-   * Install and link the `MySQL Connector/C++` library in your project settings.
-3. **Execution:** Compile and run `main.cpp`. Log in using default staff credentials to access the system dashboard.
+1. **Set up the Database:** * Open your MySQL server.
+   * Import the `database_schema.sql` file to create the tables.
+2. **Set up the Code:**
+   * Open the project in your C++ IDE (like Visual Studio).
+   * Make sure the MySQL Connector library is linked.
+3. **Run:** * Compile and run the `main.cpp` file. 
+   * Log in using the default staff password to see the main menu!
 
----
+   ---
 *Developed as part of a university degree project.*
