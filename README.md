@@ -33,7 +33,7 @@ The project uses a MySQL database named `smartfootgolfims` with a few main table
 2. **Set up the Code:**
    * Open the project in your C++ IDE (like Visual Studio).
    * Make sure the MySQL Connector library is linked.
-3. **Run:** * Compile and run the `main.cpp` file. 
+3. **Run:** * Compile and run the `sfims_code.cpp` file. 
    * Log in using the default staff password to see the main menu!
 
    ---
